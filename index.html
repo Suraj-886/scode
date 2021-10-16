@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix design</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/netflix logo.jpeg"></a>
+        <ul class="navigation">
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">Tv Shows</a></li>
+            <li> <a href="#">Movies</a></li>
+            <li> <a href="#">Letest</a></li>
+            <li> <a href="#">My list</a></li>     
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search"></i>
+        </div>
+    </header>
+    <div class="baneer">
+        <img src="images/photo.jpeg" class="bg">
+        <!-- <img src="images/barbarines.jpeg" alt=""> -->
+        <!-- <img src="images/GIF.gif" alt=""> -->
+        <div class="content">
+            <img src="images/logo.jpeg" class="movietitle">
+            <h4>
+                <span>2021</span>
+                <span><i>18+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quisquam quia dolores natus molestias, perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, totam. Amet maxime quis explicabo ut magnam! Consequatur rerum quisquam nam dicta animi repellendus error esse, autem, recusandae culpa laboriosam numquam fugiat, sunt facere tenetur. voluptate quasi ipsam, consequatur a hic autem rem?</p>
+            <div class="buttom">
+                <a href="#"><i class="fas fa-play"></i>play</a>
+                <a href="#"><i class="far fa-list"></i>my List</a>
+            </div>
+       </div>
+       <a  class="play" onclick="toggleVideo();"><img src="images/play2.png">Watch Trilar</a>
+    </div>
+
+    <div class="trailer">
+        <video src="images/video.mkv" controls="true"></video>
+        <img src="images/closed3.png" class="close" onclick="toggleVideo();">
+    </div>
+    <!-- autoplay="true" --> 
+    <script>
+        function toggleVideo(){
+            const trailar = document.querySelector('.trailer');
+            const video = document.querySelector('video')
+            trailar.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+
+</body>
+</html>
